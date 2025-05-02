@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Countries of The World</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <h1>Countries of The World</h1>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Enter country name"
+            id="input-country"
+          />
+        </div>
+        <div id="error">
+          <p>Invalid city name</p>
+        </div>
+        <div class="information">
+          <div class="countries-info">
+            <h1 id="country">Venezuela</h1>
+            <img src="https://flagcdn.com/bw.svg" />
+            <div id="details">
+              <p>Poblation: <span>28.929.231</span></p>
+              <p>Continent: <span>América</span></p>
+              <p>Time Zone: <span>UTC-4:00</span></p>
+            </div>
+          </div>
+          <div class="weather">
+            <div class="clima">
+              <img class="weather-icon" src="/images/clouds.png" alt="" />
+              <p class="clima-state">Nubes</p>
+            </div>
+            <div class="temp">
+              <p>30.41°C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert-msg">
+        <p>Demasiados resultados. Por favor, especifica mejor tu búsqueda.</p>
+      </div>
+      <img id="img-png" src="images/countries.png" alt="" />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
