@@ -2,6 +2,9 @@
 
 This is an interactive web application that allows you to search for countries around the world and obtain detailed information about them, including geographic data and the current weather in their capital.
 
+## 🚨 WEB LIVE
+https://synfiniti.github.io/countriesWorld/
+
 ## ✨ Main features
 
 - 🔎 **Search by name**: User can type in a country name to find information.
