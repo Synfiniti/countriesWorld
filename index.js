@@ -3,6 +3,7 @@ const searchInput = document.querySelector("#input-country");
 const countries = document.querySelector(".countries-info");
 const weatherIcon = document.querySelector(".weather-icon");
 const alertMsg = document.querySelector(".alert-msg");
+const filtrado = document.querySelector(".filtrado");
 
 // evento
 searchInput.addEventListener("input", async (e) => {
@@ -15,6 +16,7 @@ searchInput.addEventListener("input", async (e) => {
     document.querySelector(".information").style.display = "none";
     document.querySelector("#img-png").style.display = "block";
     alertMsg.style.display = "none";
+    filtrado.style.display = "none";
     return;
   }
 
@@ -34,13 +36,14 @@ searchInput.addEventListener("input", async (e) => {
         "<p>Too many results. Please refine your search.</p>";
       document.querySelector(".information").style.display = "none";
       alertMsg.style.display = "block";
+      document.querySelector("#img-png").style.display = "none";
       return;
     }
 
     // Lista de países (entre 2 y 10)
     if (dataCountries.length > 1 && dataCountries.length <= 10) {
       alertMsg.style.display = "none";
-      countries.innerHTML = dataCountries
+      filtrado.innerHTML = dataCountries
         .map(
           (country) => `
             <div class="country-item">
@@ -51,6 +54,7 @@ searchInput.addEventListener("input", async (e) => {
         )
         .join("");
       document.querySelector(".information").style.display = "none";
+      filtrado.style.display = "block";
       return;
     }
 
@@ -104,6 +108,7 @@ searchInput.addEventListener("input", async (e) => {
     document.querySelector(".information").style.display = "block";
     document.querySelector("#img-png").style.display = "none";
     alertMsg.style.display = "none";
+    filtrado.style.display = "none";
   } catch (error) {
     console.error("Error obteniendo datos: ", error);
     alertMsg.innerHTML =
