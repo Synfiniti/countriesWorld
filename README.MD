@@ -10,6 +10,7 @@ https://synfiniti.github.io/countriesWorld/
 - 🔎 **Search by name**: User can type in a country name to find information.
 - 📋 **Smart results filter**:
 - If there are **more than 10 countries**, a message appears requesting a more specific search.
+- If there are **between 2 and 10 countries**, a list with their **names and flags** is displayed.
 - If there is **only 1 country**, the following appears:
 - Name
 - Flag
